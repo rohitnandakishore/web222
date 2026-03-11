@@ -1,0 +1,115 @@
+body{
+margin:0;
+font-family:'Comic Sans MS', cursive;
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+background: linear-gradient(135deg,#ff758c,#ff7eb3);
+overflow:hidden;
+color:white;
+}
+
+/* Title */
+
+.title{
+position:absolute;
+top:30px;
+font-size:28px;
+text-align:center;
+}
+
+/* Card */
+
+.card{
+background:rgba(255,255,255,0.2);
+padding:40px;
+border-radius:20px;
+text-align:center;
+width:350px;
+backdrop-filter:blur(8px);
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+transition:0.5s;
+}
+
+/* Question */
+
+.question{
+font-size:20px;
+margin-bottom:20px;
+}
+
+/* Buttons */
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:25px;
+margin:10px;
+font-size:16px;
+cursor:pointer;
+background:white;
+color:#ff4d6d;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Celebration Screen */
+
+#celebration{
+position:fixed;
+top:0;
+left:0;
+height:100%;
+width:100%;
+display:none;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff4d6d,#ff85a2);
+font-size:40px;
+text-align:center;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* Floating emojis */
+
+.floating span{
+position:absolute;
+font-size:28px;
+animation:float 10s linear infinite;
+}
+
+.floating span:nth-child(1){left:10%;animation-duration:8s;}
+.floating span:nth-child(2){left:20%;animation-duration:10s;}
+.floating span:nth-child(3){left:30%;animation-duration:7s;}
+.floating span:nth-child(4){left:40%;animation-duration:9s;}
+.floating span:nth-child(5){left:50%;animation-duration:8s;}
+.floating span:nth-child(6){left:60%;animation-duration:10s;}
+.floating span:nth-child(7){left:70%;animation-duration:7s;}
+.floating span:nth-child(8){left:80%;animation-duration:9s;}
+.floating span:nth-child(9){left:90%;animation-duration:8s;}
+.floating span:nth-child(10){left:15%;animation-duration:10s;}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+}
